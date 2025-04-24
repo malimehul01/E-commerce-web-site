@@ -1,0 +1,78 @@
+*{
+
+
+    margin:0;
+    padding: 0;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+   
+ 
+}
+body{
+    background:linear-gradient(to right,#e6e6faa5,#5972ffbd);
+
+
+    height: 100vh;
+ 
+}
+
+
+.login-box{
+    width: 280px;
+    position: absolute;
+  top: 50%;
+  left: 50%;
+    transform: translate(-50%,-50%);
+    background-color:transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+  box-shadow: 0px 4px 8px  #001D3D;
+    border-radius: 10px;
+    color:black;
+
+ 
+}
+h1,input[type="text"],input[type="password"],input[type="submit"],a{
+    margin-top:2rem;
+    padding: 0.7rem;
+    width:250px;
+   color: black;
+    border-radius:10px;
+    border: none;
+    outline: none;
+}
+input[type="button"]{
+    background: #ff7b00;
+    color:black;
+    border: none;
+    padding: 0.7rem;
+    width: 250px;
+    cursor: pointer;
+    margin-top:2rem;
+    border-radius:10px;
+    transition: all 0.3s ease;
+
+
+}
+input[type="button"]:hover{
+
+    box-shadow: 0px 4px 8px  #ff7b00;;
+}
+h1,a{
+
+  
+   
+    text-align: center; 
+    text-decoration: none;
+    color:black;
+}
+a:hover{
+
+    color: #007bff;
+}
+i{
+
+    font-size: 1.6rem;
+}

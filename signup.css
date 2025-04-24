@@ -1,0 +1,76 @@
+
+*{
+
+    padding: 0;
+    margin: 0;
+     font-family: Calibri, 'Trebuchet MS', sans-serif;;
+  
+}
+
+
+
+body{
+    background:linear-gradient(to right,#5972ffbd,#e6e6faa5);
+    height:100vh;
+}
+.form{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ width:400px;
+ background-color:transparent;
+ position: absolute;
+ top:50%;
+ left: 50%;
+  transform: translate(-50%,-50%);
+  height: auto;
+  text-align: center;
+  flex-wrap: wrap;
+  padding:43px;
+  box-shadow:0px 4px 8px #000000;
+  border-radius:10px;
+  color:black;
+  
+
+ 
+}
+h1,input[type="text"],input[type="password"],input[type="email"],input[type="number"]{
+
+    margin-top:18px;
+    width:300px;
+    padding:10px;
+    outline: none;
+    border:none;
+    border-radius: 10px;
+}
+input[type="submit"]{
+    background: #ff7b00;
+    color:black;
+    border: none;
+    padding: 0.7rem;
+    width: 250px;
+    cursor: pointer;
+    margin-top:2rem;
+    border-radius:10px;
+    transition: all 0.3s ease;
+
+
+}
+input[type="submit"]:hover{
+
+    box-shadow: 0px 4px 8px  #ff7b00;;
+}
+a{
+
+    margin-top:15px;
+    color:black;
+    text-decoration: none;
+   
+}
+a:hover{
+
+    color:blue;
+    text-decoration:underline;
+   
+}

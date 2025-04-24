@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Cart</title>
+</head>
+<body>
+ 
+
+  <nav>
+    <div class="logo">
+    
+        <img src="./img/LOGO/Blue_Modern_Fashion_Shop_Logo-removebg-preview.png" id="logoimg" alt="logo">
+    </div>
+    <div class="navlink">
+    
+    
+        <a href="index.html">Home</a>
+        <a href="man.html">Man</a>
+        <a href="woman.html">Woman</a>
+        <a href="child.html">Children</a>
+        <a href="About.html">About Us</a>
+        <a href="contact page.html">Contact Us</a>
+       
+    </div>
+    <div class="search-bar">
+        <input type="text" name="search" id="searchbox" placeholder="Search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <div class="icons-and-loginbtn">
+        <i class="fa-solid fa-user"></i>
+        <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a> 
+        <a href="login.html" target="_blank"><button class="btn">Log in</button></a>    
+    
+    </div>
+    
+    
+    
+    
+    
+        </nav>
+    <ul>
+
+
+
+    </ul>
+</body>
+<script>
+ 
+ let ul=document.querySelector("ul");
+  let CartItems = JSON.parse(localStorage.getItem("cart")) || [];
+  console.log(CartItems);
+ for(let i=0;i<CartItems.length;i++){
+
+  
+    
+    let li=document.createElement("li");
+  ul.appendChild(li);
+  let img=document.createElement("img");
+  let h1=document.createElement("h1");
+  let p=document.createElement("p");
+  let h3=document.createElement("h3");
+  let buybtn=document.createElement("button");
+ 
+  buybtn.classList.add("buybtn");
+    buybtn.innerHTML="Buy Now";
+
+  li.appendChild(img)
+  li.appendChild(h1);
+  li.appendChild(p);
+  li.appendChild(h3);
+  li.appendChild(buybtn);
+  
+
+  h1.textContent=CartItems[i].name;
+    p.textContent=`Price of qty 1 :-  ${CartItems[i].price}`;
+    let quantity = CartItems[i].quantity > 1 ? CartItems[i].quantity : 1;
+    h3.textContent = ` Quantity: ${quantity}`;
+    img.src=CartItems[i].img;
+    
+
+    let removebtn=document.createElement("button");
+    li.appendChild(removebtn);
+    removebtn.classList.add("removebtn");
+    removebtn.innerHTML="Remove";
+    removebtn.addEventListener("click",()=>{
+        ul.removeChild(li);
+        CartItems.splice(i,1);
+        localStorage.setItem("cart",JSON.stringify(CartItems));
+       
+      
+    })
+ }
+
+
+
+ 
+
+</script>
+</html>
